@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment</title>
+
+    <style>
+        @keyframes my-animation {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(359deg);
+            }
+        }
+
+        @keyframes growUp {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+                background-color: rgb(17, 16, 28);
+            }
+        }
+
+        .box {
+            position: fixed;
+            animation: my-animation 1s infinite linear;
+            animation-duration: infinite;
+            border-radius: 8px;
+        }
+
+        #second_inner_circle {
+            height: 300px;
+            width: 300px;
+            background-color: #050210;
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            animation: growUp 1s infinite linear;
+            top: 50%;
+            left: 50%;
+            margin: -150px 0px 0px -150px;
+        }
+
+        #first_inner_circle {
+            height: 300px;
+            width: 300px;
+            background-color: #050210;
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -150px 0px 0px -150px;
+        }
+
+        #second_outer_circle {
+            height: 330px;
+            width: 330px;
+            background-image: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            left: 30%;
+            margin-top: 8%;
+        }
+
+        #first_outer_circle {
+            height: 330px;
+            width: 330px;
+            background-image: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            left: 30%;
+            margin-top: 8%;
+            filter: blur(70px);
+        }
+
+        body {
+            background-color: #050210;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="first_outer_circle" class="box"></div>
+    <div id="second_outer_circle" class="box">
+
+        <div id="first_inner_circle" class="box"></div>
+        <div id="second_inner_circle" class="box"></div>
+    </div>
+
+
+</body>
+
+</html>
